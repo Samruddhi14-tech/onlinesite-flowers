@@ -1,0 +1,253 @@
+/* ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#ffe5ec;
+    color:#333;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    background:white;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    z-index:1000;
+}
+
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:26px;
+    font-weight:700;
+    color:#fb6f92;
+}
+
+nav a{
+    margin:0 15px;
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#fb6f92;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#fb6f92;
+    transition:0.4s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+.icons i{
+    margin-left:20px;
+    color:#fb6f92;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:85vh;
+    background:linear-gradient(rgba(255,194,209,0.4),rgba(255,179,198,0.4)),
+    url('https://images.unsplash.com/photo-1490750967868-88aa4486c946') center/cover;
+    display:flex;
+    align-items:center;
+    padding-left:10%;
+}
+
+.hero-text h1{
+    font-family:'Playfair Display',serif;
+    font-size:52px;
+    color:#fb6f92;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    max-width:500px;
+    margin-bottom:30px;
+}
+
+.btn-primary{
+    background:#fb6f92;
+    color:white;
+    padding:12px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.4s;
+    box-shadow:0 8px 20px rgba(251,111,146,0.3);
+}
+
+.btn-primary:hover{
+    background:#ff8fab;
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(251,111,146,0.4);
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:80px 8%;
+    text-align:center;
+}
+
+section h2{
+    font-family:'Playfair Display',serif;
+    font-size:36px;
+    margin-bottom:50px;
+    color:#fb6f92;
+}
+
+/* ================= GRID ================= */
+
+.grid-4{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    transition:0.6s;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+.card h3{
+    margin:20px 0;
+    font-family:'Playfair Display',serif;
+    color:#fb6f92;
+}
+
+.card p{
+    padding:0 20px 20px;
+    font-size:14px;
+}
+
+/* ================= FORMS ================= */
+
+.form-container{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select{
+    padding:12px;
+    border:1px solid #ffc2d1;
+    border-radius:10px;
+    outline:none;
+}
+
+.form-container input:focus,
+.form-container textarea:focus,
+.form-container select:focus{
+    border-color:#fb6f92;
+}
+
+/* ================= CART ================= */
+
+.cart-item{
+    display:flex;
+    gap:30px;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:40px;
+}
+
+.cart-item img{
+    width:200px;
+    border-radius:15px;
+}
+
+.confirmation-section{
+    padding:150px 8%;
+}
+
+.confirmation-section i{
+    font-size:60px;
+    color:#fb6f92;
+    margin-bottom:20px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#ffc2d1;
+    padding:25px;
+    text-align:center;
+    font-size:14px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero-text h1{
+        font-size:36px;
+    }
+
+    .cart-item{
+        flex-direction:column;
+    }
+}
+/* Logo Image Styling */
+header .logo img {
+    height: 50px; /* adjust as needed */
+    width: auto;
+    display: block;
+}
